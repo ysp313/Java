@@ -1,0 +1,11 @@
+début du programme
+    float argent = 12,42
+    float prixBonbon = 1,14
+    entier nbBonbon = 0
+        Si argent > 0 et prixBonbon > 0
+            tant que argent > 0
+                nbBonbon += 1
+                argent = argent - prixBonbon
+        Fin de boucle
+        Afficher nbBonbon
+fin du programme
