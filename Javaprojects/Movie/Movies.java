@@ -16,7 +16,7 @@ class  Movies {
             {"Ford","Allen","Freeman"} // Case 2
         };
         
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < titles.lenght; i++) {
             System.out.println("Dans le film "+ titles[i]+ ", les principaux acteurs sont : "+ acteurs[i][0]+ ", "+ acteurs[i][1]+ ", "+ acteurs[i][2]);
         }
 	}
