@@ -1,7 +1,7 @@
 public class Wilder //creation de la Classe
 {
-    String firstName;
-    boolean aware;
+    private String firstName;
+    private boolean aware;
 
     //Création du constructeur
     public Wilder(String name, boolean aware) 
@@ -44,14 +44,13 @@ public class Wilder //creation de la Classe
     public String whoAmI()
     {
         String name = getName();
-        boolean aware = getAware();
          if (getAware())
          {
-         return ("Je m'appelle "+ this.getName()+ " et je suis aware");
+         return ("Je m'appelle "+ name+ " et je suis aware");
          }
          else
          {
-         return ("Je m'appelle "+ this.getName() + " et je ne suis pas aware");
+         return ("Je m'appelle "+ name + " et je ne suis pas aware");
          }
     }
 
