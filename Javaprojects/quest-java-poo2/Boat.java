@@ -1,9 +1,10 @@
 public class Boat extends Vehicule
 {
-    public Boat()
+    public Boat(String brand, int kilometers)
     {
         super(brand, kilometers);
     }
+
     @Override
     public String doStuff()
     {

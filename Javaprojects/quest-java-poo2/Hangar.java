@@ -1,6 +1,6 @@
 public class Hangar
 {
-    public static void  Main (String args)
+    public static void  main(String[] args)
     {
         //création des instances
         Car citroen = new Car("c3", 25000);

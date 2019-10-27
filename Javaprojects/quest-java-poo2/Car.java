@@ -1,8 +1,8 @@
 public class Car extends Vehicule
 {
-    public  Car(){
-        super(brand);
-        super(kilometers);
+    public  Car(String brand, int kilometers)
+    {
+        super(brand, kilometers);
     }
     @Override
     public String doStuff()
