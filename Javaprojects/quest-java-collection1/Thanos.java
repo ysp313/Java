@@ -38,7 +38,6 @@ public class Thanos {
 
         // TODO 3 : It's Thor birthday, now he's 1501
         thor.setAge(1501);
-        // or "heroes.set(5, Thor, 1501);"
         for (Hero hero : heroes) { // iterate though the list
             System.out.println(hero.getName()+" "+ hero.getAge());
         }
