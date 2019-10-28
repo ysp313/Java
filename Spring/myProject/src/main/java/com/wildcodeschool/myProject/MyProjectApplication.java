@@ -17,7 +17,37 @@ public class MyProjectApplication {
     @RequestMapping("/")
     @ResponseBody
     public String index() {
-        return "Greetings from Spring Boot!";
+        return "<a href = /doctor>find the doctor</a>";
+
+    }
+    @RequestMapping("/doctor")
+    @ResponseBody
+    public String indexB() {
+        return "<ul>"
+        +"<li><a href = /doctor/1>Doctor 1</a></li>"
+        +"<li><a href = /doctor/2>Doctor 2</a></li>"
+        +"<li><a href = /doctor/3>Doctor 3</a></li>"
+        +"<li><a href = /doctor/4>Doctor 4</a></li>";
+    }
+    @RequestMapping("/doctor/1")
+    @ResponseBody
+    public String index1() {
+        return "William Hartnell";
+    }
+    @RequestMapping("/doctor/2")
+    @ResponseBody
+    public String index2() {
+        return "Patrick Troughton";
+    }
+    @RequestMapping("/doctor/3")
+    @ResponseBody
+    public String index3() {
+        return "Jon Pertwee";
+    }
+    @RequestMapping("/doctor/4")
+    @ResponseBody
+    public String index4() {
+        return "Tom Baker";
     }
 
 }
