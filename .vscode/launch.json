@@ -11,6 +11,16 @@
             "name": "CodeLens (Launch) - Nature",
             "request": "launch",
             "mainClass": "Nature"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MyProjectApplication<myProject>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.wildcodeschool.myProject.MyProjectApplication",
+            "projectName": "myProject",
+            "args": ""
         }
     ]
 }
