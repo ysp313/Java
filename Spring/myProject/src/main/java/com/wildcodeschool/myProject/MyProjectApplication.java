@@ -17,7 +17,7 @@ public class MyProjectApplication {
     @RequestMapping("/")
     @ResponseBody
     public String index() {
-        return "<a href = /doctor>find the doctor</a>";
+        return "<a href = /doctor>Spring01</a>"+ "</br>"+ "<a href = /doctor2>Spring02</a>";
 
     }
     @RequestMapping("/doctor")
