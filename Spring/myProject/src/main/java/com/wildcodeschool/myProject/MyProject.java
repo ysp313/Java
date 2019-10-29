@@ -21,7 +21,8 @@ public class MyProject {
     @RequestMapping("/doctor2/{numero}")
     @ResponseBody
     public String doctor(@PathVariable int numero) {
-        String [] doctorName = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"};
+        String [] doctorName = {"William Hartnell", "Jon Pertwee", "Tom Baker", "Peter Davison", "Colin Baker", "Sylvester McCoy", "Paul McGann"
+        , "John Hurt", "Christopher Eccleston", "David Tennant", "Matt Smith", "Peter Capaldi", "Jodie Whittaker"};
         String name = doctorName[numero];
 
         if (numero >= 9 && numero <= 13) 
