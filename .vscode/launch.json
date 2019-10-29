@@ -21,6 +21,16 @@
             "mainClass": "com.wildcodeschool.myProject.MyProjectApplication",
             "projectName": "myProject",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MyProject<myProject>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.wildcodeschool.myProject.MyProject",
+            "projectName": "myProject",
+            "args": ""
         }
     ]
 }
