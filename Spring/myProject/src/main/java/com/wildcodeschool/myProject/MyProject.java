@@ -14,7 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 public class MyProject {
 
     private final String [] doctorName = {"William Hartnell", "Jon Pertwee", "Tom Baker", "Peter Davison", "Colin Baker", "Sylvester McCoy", "Paul McGann"
-    , "John Hurt", "Christopher Eccleston", "David Tennant", "Matt Smith", "Peter Capaldi", "Jodie Whittaker", "Need Thelast};
+    , "John Hurt", "Christopher Eccleston", "David Tennant", "Matt Smith", "Peter Capaldi", "Jodie Whittaker", "Need Thelast"};
     public static void main(String[] args) {
         SpringApplication.run(MyProjectApplication.class, args);
     }
