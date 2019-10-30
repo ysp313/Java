@@ -26,7 +26,7 @@ public class MyProject {
         String pageLi =  "<ul>";
         for (int i = 0 ; i < doctorName.length; i++)
             {
-               pageLi += "<li><a href ='/doctor2/" + i+"'>" + doctorName[i]+"</a></li>";
+               pageLi += "<li><a href ='/doctor2/" + i +"'>" + doctorName[i]+"</a></li>";
             
             }
             pageLi+="</ul>";
