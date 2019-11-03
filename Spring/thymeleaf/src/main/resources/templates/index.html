@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Doctor Sign In</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+</head>
+<body>
+    <header th:replace="header :: top"> <!--Ajout du header-->
+    <nav>
+        <span>Doctor Secret Service</span>
+        <a href="/">Sign In</a>
+    </nav>
+</header>
+<form method="get" action="doctor">
+    <fieldset>
+        <label for="name">Your doctor's name: </label>
+        <input id="name" name="name" type="text" placeholder="Your name here">
+        <hr>
+        <label for="number">Your doctor's number: </label>
+        <input id="number" name="number" type="number" placeholder="0">
+        <hr>
+        <input type="submit" value="Sign In">
+    </fieldset>
+</form>
+<footer th:replace="footer :: foot"></footer> <!--Ajout du footer-->
+</body>
+</html>
