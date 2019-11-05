@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"> <!--permet de pouvoir utiliser thymeleaf-->
 <head>
     <title>Doctor Sign In</title>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
@@ -11,7 +11,7 @@
         <a href="/">Sign In</a>
     </nav>
 </header>
-<form method="get" action="doctor">
+<form method="get" th:action=@"{/doctor}">
     <fieldset>
         <label for="name">Your doctor's name: </label>
         <input id="name" name="name" type="text" placeholder="Your name here">
