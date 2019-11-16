@@ -11,10 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @SpringBootApplication
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
-
 	@GetMapping("/doctor")
 	public String doctor(Model model,
 						@RequestParam(value="name",
@@ -35,5 +31,9 @@ public class DemoApplication {
 			{
 				return "index";
 			}
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
 
 }
