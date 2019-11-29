@@ -1,0 +1,20 @@
+Quels sont les noms des rôles définis par SCRUM ?
+Quels sont les noms des rituels (ou événements) définis par SCRUM ?
+Qu'est-ce qu'un carnet de produit (product backlog) et qui le rédige ?
+Qu'est-ce qu'un carnet de sprint (sprint backlog) ?
+Qu'est-ce qu'un graphique d'avancement (burndown chart) ?
+Comment se déroule une mêlée quotidienne (daily scrum) ?
+Quel est le rôle d'un chef de mêlée (scrum master) ?
+Dans un projet Git Workflow, pour quelle(s) raison(s) dois-je créer une branche ?
+À partir d'où dois-je tirer une nouvelle branche ?
+Que dois-je faire quand ma branche est fonctionnelle ?
+Quand la branche master doit-elle être mise à jour ?
+En temps que relecteur de code (code reviewer), que dois-je faire ?
+Quels sont les accès d'une classe en visibilité protected ?
+Quels sont les accès d'une classe en visibilité package ?
+Dans quels cas dois-je laisser des commentaires dans du code Java ?
+Quelle(s) différence(s) y a t'il entre du code fonctionnel et du code de qualité ?
+Dans quel cas dois-je utiliser la convention de nommage camel case majuscule (pacal case) ?
+Quelle convention de nommage utiliser pour une constante ?
+Dans quel cas dois-je définir une constante ?
+Simplifier le code suivant : if (a < b) { test = true; } else { test = false; }
