@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Parse",
+            "request": "launch",
+            "mainClass": "Parse"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Thanos",
             "request": "launch",
             "mainClass": "Thanos"
