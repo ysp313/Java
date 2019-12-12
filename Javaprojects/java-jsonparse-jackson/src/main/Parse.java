@@ -17,17 +17,17 @@ public class Parse {
             JsonNode root = objectMapper.readTree(new File(JSON_WEATHER_PATH));
 
             // TODO : get the value of "name" attribute
-            String cityName = root.get("name").asString();
-
+            String cityName = root.get("name").asText();
+            JsonNode coord = root.get("coord");
             // TODO : get the "lat" and "lon" values of the "coord"
-            Double cityLatitude = root.get("lat").asDouble();
-            Double cityLongitude = root.get("lon").asDouble();
+            Double cityLatitude = coord.get("lat").asDouble();
+            Double cityLongitude = coord.get("lon").asDouble();
 
             // TODO : get the "wind" attribute as an Wind object
-            Wind wind = root.get("wind");
+            Wind wind = objectMapper.convertValue(root.get("wind"), Wind.class);
 
             // TODO : get the "weather" attribute as an array of Weather objects
-            Weather[] weathers = root.get("weather");
+            Weather[] weathers = objectMapper.convertValue(root.get("weather"), Weather[].class);
 
             // Don't touch this !
             System.out.printf("City name: %s%n", cityName);
