@@ -14,7 +14,7 @@ public class NewsroomController {
 
     @Autowired
     // TODO : test with "videoReviewRepository" qualifier
-    @Qualifier("articleReviewRepository")
+    @Qualifier("videoReviewRepository")
     private ReviewDao repository;
 
     @GetMapping("/review")
