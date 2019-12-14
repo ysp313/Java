@@ -21,7 +21,7 @@ public class SwapiController {
         return "index";
     }
 
-    @GetMapping("/planets")
+    @GetMapping("/planet")
     public String planet(Model model, @RequestParam Long id) {
 
         WebClient webClient = WebClient.create(SWAPI_URL);

@@ -12,11 +12,12 @@ public class Planet {
     private String diameter;
     private String climate;
     private String gravity;
+    private String terrain;
     @JsonProperty("surface_water")
     private String surfaceWater;
     private String population;
-    private String[] resident;
-    private String[] film;
+    private String[] residents;
+    private String[] films;
     private String created;
     private String edited;
     private String url;
@@ -74,6 +75,14 @@ public class Planet {
         this.gravity = gravity;
     }
 
+    public String getTerrain() {
+        return this.terrain;
+    }
+
+    public void setTerrain(String terrain) {
+        this.terrain= terrain;
+    }
+
     public String getSurfaceWater() {
         return this.surfaceWater;
     }
@@ -90,20 +99,20 @@ public class Planet {
         this.population = population;
     }
 
-    public String[] getResident() {
-        return resident;
+    public String[] getResidents() {
+        return residents;
     }
 
-    public void setResident(String[] resident) {
-        this.resident = resident;
+    public void setResidents(String[] resident) {
+        this.residents = resident;
     }
 
-    public String[] getFilm() {
-        return film;
+    public String[] getFilms() {
+        return films;
     }
 
-    public void setFilm(String[] film) {
-        this.film = film;
+    public void setFilms(String[] film) {
+        this.films = film;
     }
 
     public String getCreated() {
