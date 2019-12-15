@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-WildAndWizardApplication<wildandwizard>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.wildcodeschool.wildandwizard.WildAndWizardApplication",
+            "projectName": "wildandwizard",
+            "args": ""
+        }
+    ]
+}
