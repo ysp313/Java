@@ -2,6 +2,9 @@ package com.wildcodeschool.wildandwizard.repository;
 
 import com.wildcodeschool.wildandwizard.entity.Wizard;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,6 +17,10 @@ public class WizardRepository implements WizardDao {
                     new Wizard(1L, "Harry", "Potter", new Date(80, 6, 31), "London", "", false)
             )
     );
+
+    @Autowired
+    @Qualifier("wizard")
+    private Wizard wizard;
 
     @Override
     public Wizard save(Wizard wizard) {
