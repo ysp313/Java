@@ -1,9 +1,7 @@
 package com.wildcodeschool.wildandwizard.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 import java.sql.Date;
 
 @Entity
@@ -18,12 +16,17 @@ public class Wizard {
     private String birthPlace;
     private String biography;
     private boolean muggle;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH, optional = false)
+    @JoinColumn(name = "school_id", nullable = false)
+    private School school;
+
 
     public Wizard() {
     }
+    
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -31,7 +34,7 @@ public class Wizard {
     }
 
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
     public void setFirstName(String firstName) {
@@ -39,7 +42,7 @@ public class Wizard {
     }
 
     public String getLastName() {
-        return lastName;
+        return this.lastName;
     }
 
     public void setLastName(String lastName) {
@@ -47,7 +50,7 @@ public class Wizard {
     }
 
     public Date getBirthday() {
-        return birthday;
+        return this.birthday;
     }
 
     public void setBirthday(Date birthday) {
@@ -55,7 +58,7 @@ public class Wizard {
     }
 
     public String getBirthPlace() {
-        return birthPlace;
+        return this.birthPlace;
     }
 
     public void setBirthPlace(String birthPlace) {
@@ -63,7 +66,7 @@ public class Wizard {
     }
 
     public String getBiography() {
-        return biography;
+        return this.biography;
     }
 
     public void setBiography(String biography) {
@@ -71,10 +74,22 @@ public class Wizard {
     }
 
     public boolean isMuggle() {
-        return muggle;
+        return this.muggle;
+    }
+
+    public boolean getMuggle() {
+        return this.muggle;
     }
 
     public void setMuggle(boolean muggle) {
         this.muggle = muggle;
+    }
+
+    public School getSchool() {
+        return this.school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
     }
 }
