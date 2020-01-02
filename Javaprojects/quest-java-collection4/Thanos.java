@@ -50,7 +50,7 @@ public class Thanos {
 
         for (Hero hero : treeGift.keySet()) {
             Flower flower = treeGift.get(hero);
-            System.out.println(hero.getName() + ": " + flower.getName());
+            System.out.println(flower.getName());
         }
     }
 }
