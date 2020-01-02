@@ -1,9 +1,8 @@
 package com.wildcodeschool.wildandwizard.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.*;
+
+import javax.persistence.*;
 
 @Entity
 public class Course {
@@ -12,7 +11,10 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @ManyToMany(mappedBy = "courses")
+    private List<Wizard> wizards = new ArrayList<>();
 
+    // ************constructeurs *************
     public Course() {
     }
 
@@ -20,6 +22,8 @@ public class Course {
         this.name = name;
     }
 
+
+    // ************Getters & Setters*************
     public Long getId() {
         return id;
     }
@@ -35,4 +39,14 @@ public class Course {
     public void setName(String name) {
         this.name = name;
     }
+
+
+    public List<Wizard> getWizards() {
+        return this.wizards;
+    }
+
+    public void setWizards(List<Wizard> wizards) {
+        this.wizards = wizards;
+    }
+
 }
