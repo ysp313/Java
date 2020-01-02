@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Thanos {
 
     public static void main(String[] args) {
@@ -21,10 +23,34 @@ public class Thanos {
         // Vision has a Tulip
         // Captain America has a Lily
         // Doctor Strange and Black Widow have a Violet
+        Comparator<Hero> comparator = new Comparator<Hero>(){
+            
+            @Override
+            public int compare(Hero hero0, Hero hero1) {
+                return  hero0.getName().compareTo(hero1.getName());
+            }
+        };
+
+        Map<Hero, Flower> treeGift = new TreeMap<>(comparator);
+
+        treeGift.put(hulk, rose);
+        treeGift.put(thor, rose);
+        treeGift.put(scarletWitch, rose);
+        treeGift.put(vision, tulip);
+        treeGift.put(captainAmerica, lily);
+        treeGift.put(doctorStrange, violet);
+        treeGift.put(blackWidow, violet);
 
         // TODO 2 : Print if `begonia` is contained in the TreeMap
 
+        System.out.println(treeGift.containsValue(begonia));
+        
+
         // TODO 3 : For each hero, alphabetically, print the corresponding flower
 
+        for (Hero hero : treeGift.keySet()) {
+            Flower flower = treeGift.get(hero);
+            System.out.println(hero.getName() + ": " + flower.getName());
+        }
     }
 }
