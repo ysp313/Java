@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.wildcodeschool.myProjectWithSecurity.config;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -13,24 +13,26 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests()
+                .authorizeRequests() 						// Define access control
+                .antMatchers("/").permitAll()
+                .antMatchers("/avengers/assemble").hasRole("CHAMPION")
+                .antMatchers("/secret-bases").hasAnyRole("DIRECTOR")
                 .anyRequest().authenticated()
                 .and()
-                .formLogin()
-                .and()
-                .httpBasic();
+                .formLogin() // Add a login form with default configuration
+        ;
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
         auth.inMemoryAuthentication()
-                .withUser("user")
-                .password(encoder.encode("user"))
-                .roles("")
+                .withUser("Steve")
+                .password(encoder.encode("CHAMPION"))
+                .roles("CHAMPION")
                 .and()
-                .withUser("admin")
-                .password(encoder.encode("admin"))
-                .roles("ADMIN");
+                .withUser("Nickflerken")
+                .password(encoder.encode("DIRECTOR"))
+                .roles("DIRECTOR");
     }
 }
