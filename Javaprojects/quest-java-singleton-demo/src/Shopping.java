@@ -1,3 +1,4 @@
+
 public class Shopping {
 
     public static void shop() {
