@@ -20,7 +20,7 @@ public class Shield {
         List<Hero> elders = heroes
         // TODO 1 : filter heroes in order to found heroes older than 59
             .stream()
-            .filter(c -> c.getAge() > 59)
+            .filter(predicate -> predicate.getAge() > 59)
             .collect(Collectors.toList());
 
         System.out.println("\nElders:");
@@ -31,7 +31,7 @@ public class Shield {
         List<Hero> intolerants = heroes
         // TODO 2 : filter heroes in order to found heroes that are gluten intolerants
         .stream()
-            .filter(c -> c.isGlutenIntolerant())
+            .filter(predicate -> predicate.isGlutenIntolerant())
             .collect(Collectors.toList());
 
         System.out.println("\nGluten intolerants:");
